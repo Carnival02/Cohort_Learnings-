@@ -74,3 +74,13 @@ let promise=new Promise((resolve,reject)=>{
     
 })
 
+// ASYNC AWAIt
+
+async function hello(){
+    console.log("HEllo");
+    
+}
+
+// HERE fxn hello is promise
+await hello()
+await hello() // here 1st call execute 1st and then the 2nd one is execute only after 1st 
