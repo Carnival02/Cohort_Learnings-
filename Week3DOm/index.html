@@ -7,20 +7,25 @@
 </head>
 <body>
     <h1>To-DO List</h1>
-    <h4>Take class</h4>
-    <h4>Go</h4>
+    <h4 id="todo1">Take class</h4>
+    <h4 id="todo2">Go</h4>
     <h4>go to Gym </h4>
     <div>
         <input type="text" placeholder="Add todo" ></input>
-        <button onclick="addTodo()">Add todo</button>
+        <button onclick="deletenode()" >Add todo</button>
     </div>
 <script>
-    console.log(document);
     
-    const inputs=document.querySelector('h1');
-    console.log(input);
     
-    // console.log(input);
+    function deletenode(){
+        const ele=document.querySelector("h4")
+        ele.parentNode.removeChild(ele);
+    }
+    
+    // setInterval(call,1000)
+
+   
+
     
     
 
