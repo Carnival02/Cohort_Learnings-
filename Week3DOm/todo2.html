@@ -33,17 +33,19 @@
       todos.splice(0, 1) // remove the last element from the arr
       render()
     }
-    // function Delete(){
-    //     todos.pop()
-    //     render();
-    // }
+
+    function deletettodo(index){
+        todos.splice(index,1);
+        render();
+    }
 
 
-    function createTodoComponent(todo) {
+    function createTodoComponent(todo,index ){
       const div = document.createElement("div");
       const h1 = document.createElement("h1");
       const button = document.createElement("button");
       button.innerHTML = "Delete"
+      button.setAttribute("onclick","deletettodo(" + index +")");
       h1.innerHTML = todo.title;
       div.append(h1)
       div.append(button)
@@ -54,7 +56,7 @@
     function render() {
       document.querySelector("#todos").innerHTML = "";
       for (let i = 0; i < todos.length; i++) {
-        const element = createTodoComponent(todos[i]);
+        const element = createTodoComponent(todos[i],i);
         document.querySelector("#todos").appendChild(element)
       }
     }
