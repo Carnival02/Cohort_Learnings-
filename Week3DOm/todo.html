@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TODO app</h1>
+    <input type="text" ></input>
+    <button onclick="addTodo()">Add todo</button>
+    <!-- <button onclick="deletetodo()">Delete Button</button> -->
+
+</body>
+<script>
+
+    let cnt=1;
+    function addTodo(){
+        const Value=document.querySelector("input")
+        const inp=Value.value;
+
+        const newDiv=document.createElement("div")
+        newDiv.setAttribute("id",cnt)
+      
+        newDiv.innerHTML=`<div>${inp}</div><button onclick='deleteTodo(${cnt})'>Delete TODO </button>`;
+        document.querySelector("body").appendChild(newDiv);
+        cnt=cnt+1;
+
+    }
+    function deleteTodo(index){
+        const task=document.getElementById(index);
+        task.parentNode.removeChild(task);
+
+
+        
+    }
+
+</script>
+</html>

@@ -10,10 +10,10 @@
     <h4 id="todo1">Take class</h4>
     <h4 id="todo2">Go</h4>
     <h4>go to Gym </h4>
-    <div>
+    <!-- <div>
         <input type="text" placeholder="Add todo" ></input>
         <button onclick="deletenode()" >Add todo</button>
-    </div>
+    </div> -->
 <script>
     
     
@@ -23,6 +23,16 @@
     }
     
     // setInterval(call,1000)
+    let divl=document.querySelector("h4")
+    divl.innerHTML=  `    <div>
+        <input type="text" placeholder="Add todo" ></input>
+        <button onclick="deletenode()" >Add todo</button>
+        </div>
+    `
+    const part= document.querySelector("body");
+    part.appendChild(divl);
+
+
 
    
 
