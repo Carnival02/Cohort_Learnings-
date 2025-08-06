@@ -66,7 +66,8 @@ app.post('/signin',function(req,res){
 
 })
 
-function authMiddleware(req,res,next){
+// Auth middleware
+function authMiddleware(req,res,next){ 
 
     const token=req.headers.token
     const decodedData=jwt.verify(token,JWT_SECRET)
@@ -105,4 +106,4 @@ app.get('/me',authMiddleware,function(req,res){
     
 })
 
-app.listen(3000)
+app.listen(3000) 
