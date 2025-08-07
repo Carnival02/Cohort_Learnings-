@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 const { z } =require("zod");
 // const JWT_SECRET="ghagjdhuj6ghh466"
-mongoose.connect("mongodb+srv://carnival:7532040743H%40r@cluster0.p5ihj9o.mongodb.net/")
+mongoose.connect("")
 
 const app = express();
 app.use(express.json());
