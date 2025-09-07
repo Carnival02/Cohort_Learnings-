@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img top="0" id="bird" src="bird.webp" alt="" >
+    <canvas width="500" height="600">
+        
+
+
+
+    </canvas>
+
+    
+</body>
+
+<script>
+    let bird=document.getElementById("bird");
+    setInterval(()=>{
+       let px=bird.getAttribute("top");
+       px=parseInt(px)+1;
+       bird.style.top=px+"px";
+       bird.setAttribute("top",px)
+    },100)
+
+</script>
+
+
+</html>
